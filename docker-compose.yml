@@ -1,0 +1,67 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ekai
+      POSTGRES_PASSWORD: ekai
+      POSTGRES_DB: ekai
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./docker/postgres-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ekai -d ekai"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      ENV: development
+      DATABASE_URL: postgresql+psycopg://ekai:ekai@db:5432/ekai
+      JWT_SECRET: ${JWT_SECRET:-dev-secret-change-me}
+      LLM_PROVIDER_ORDER: ${LLM_PROVIDER_ORDER:-gemini,ollama,mock}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-1.5-flash}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2}
+      # The app package lives at the container's WORKDIR (/app) directly,
+      # not under an extra backend/ segment like it does in the repo layout
+      # on the host — these tell scripts/ and the evaluations API route
+      # where to actually find things inside the container (see comments in
+      # scripts/seed_db.py and app/api/routes/evaluations.py).
+      BACKEND_DIR: /app
+      EVALS_DIR: /app/evals
+    ports:
+      - "8000:8000"
+    volumes:
+      - backend_storage:/app/storage
+      - ./sample_data:/app/sample_data:ro
+      - ./evals:/app/evals
+      - ./scripts:/app/scripts:ro
+
+  frontend:
+    build:
+      context: ./frontend
+      # NEXT_PUBLIC_* vars are inlined into the JS bundle at `next build`
+      # time, not read at container runtime — must be passed as a build arg,
+      # not `environment:` (which would silently have no effect).
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000/api}
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
+
+volumes:
+  pgdata:
+  backend_storage:

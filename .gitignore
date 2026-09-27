@@ -1,0 +1,40 @@
+# --- Environment / secrets -------------------------------------------------
+.env
+.env.local
+*.env
+!.env.example
+
+# --- Python ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+backend/pip_install.log
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# --- Node / Next.js ---------------------------------------------------------
+node_modules/
+.next/
+frontend/out/
+frontend/.next/
+frontend/next-env.d.ts
+npm-debug.log*
+
+# --- Runtime data ------------------------------------------------------
+backend/storage/
+storage/
+evals/results/*.json
+evals/results/*.csv
+!evals/results/.gitkeep
+
+# --- OS / editor ---------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Docker --------------------------------------------------------------
+docker/pgdata/

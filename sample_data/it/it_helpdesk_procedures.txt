@@ -1,0 +1,35 @@
+IT HELPDESK PROCEDURES
+
+CONTACTING THE HELPDESK
+
+The IT Helpdesk is available Monday–Friday, 7:00 AM–7:00 PM local time, via extension 4357 (HELP), email at helpdesk@acmefs.com, or the self-service portal. Outside these hours, SEV-1 outages are routed to the on-call engineer via PagerDuty.
+
+TICKET PRIORITY LEVELS
+
+P1 (Critical): complete inability to work, or an outage affecting an entire team. Target response: 15 minutes.
+
+P2 (High): significant impairment for one person (e.g., laptop won't boot). Target response: 2 hours.
+
+P3 (Medium): non-blocking issue (e.g., slow performance). Target response: 1 business day.
+
+P4 (Low): general requests (software install, access request). Target response: 3 business days.
+
+NEW HIRE EQUIPMENT
+
+New hire laptops are shipped or ready for pickup 3 business days before the employee's start date, provided the HR onboarding record was created at least 5 business days in advance. Standard equipment includes a laptop, monitor, keyboard, mouse, and headset.
+
+PASSWORD RESETS
+
+Employees can self-service reset their password via the Single Sign-On portal using MFA. If MFA is unavailable, identity must be verified by the Helpdesk via a video call with a government-issued ID before a manual reset is performed.
+
+SOFTWARE REQUESTS
+
+Requests for new software must be submitted through the IT Service Catalog. Standard catalog items are auto-approved; non-catalog software requires manager approval and, for tools touching client data, Security team review, typically completed within 5 business days.
+
+LOANER EQUIPMENT
+
+Employees may request loaner laptops for up to 10 business days while their primary device is repaired. Loaner requests are made through the Helpdesk portal and require manager acknowledgment.
+
+EQUIPMENT RETURN
+
+All company equipment must be returned to IT within 5 business days of an employee's last day. Unreturned equipment may be charged back to the employee's final paycheck where permitted by local law.

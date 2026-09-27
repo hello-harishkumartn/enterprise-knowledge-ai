@@ -1,0 +1,17 @@
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+exclude = [".venv", "storage"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+# E501: line length handled by formatting, not worth failing CI over.
+# B008: FastAPI's `Depends(...)` as a default argument is the documented,
+# idiomatic pattern — not the "mutable default" footgun this rule targets.
+ignore = ["E501", "B008"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["B011"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app"]

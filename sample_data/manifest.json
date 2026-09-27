@@ -1,0 +1,31 @@
+[
+  {"path": "hr/employee_handbook.docx", "name": "Employee Handbook", "document_type": "handbook", "department": "HR", "category": "hr_policy", "allowed_roles": ["admin", "employee"]},
+  {"path": "hr/leave_policy.pdf", "name": "Leave and Time-Off Policy", "document_type": "policy", "department": "HR", "category": "hr_policy", "allowed_roles": ["admin", "employee"]},
+  {"path": "hr/travel_and_expense_policy.md", "name": "Travel and Expense Policy", "document_type": "policy", "department": "HR", "category": "hr_policy", "allowed_roles": ["admin", "employee"]},
+  {"path": "hr/code_of_conduct.md", "name": "Code of Conduct", "document_type": "policy", "department": "HR", "category": "hr_policy", "allowed_roles": ["admin", "employee"]},
+  {"path": "hr/remote_work_policy.md", "name": "Remote and Hybrid Work Policy", "document_type": "policy", "department": "HR", "category": "hr_policy", "allowed_roles": ["admin", "employee"]},
+  {"path": "hr/performance_review_process.md", "name": "Performance Review Process", "document_type": "procedure", "department": "HR", "category": "hr_procedure", "allowed_roles": ["admin", "employee"]},
+  {"path": "hr/onboarding_process.md", "name": "New Employee Onboarding Process", "document_type": "procedure", "department": "HR", "category": "hr_procedure", "allowed_roles": ["admin", "employee"]},
+
+  {"path": "it/information_security_policy.md", "name": "Information Security Policy", "document_type": "policy", "department": "IT", "category": "security_policy", "allowed_roles": ["admin", "employee"]},
+  {"path": "it/acceptable_use_policy.md", "name": "Acceptable Use Policy", "document_type": "policy", "department": "IT", "category": "security_policy", "allowed_roles": ["admin", "employee"]},
+  {"path": "it/password_and_access_management_policy.md", "name": "Password and Access Management Policy", "document_type": "policy", "department": "IT", "category": "security_policy", "allowed_roles": ["admin", "employee"]},
+  {"path": "it/it_helpdesk_procedures.txt", "name": "IT Helpdesk Procedures", "document_type": "procedure", "department": "IT", "category": "it_procedure", "allowed_roles": ["admin", "employee"]},
+  {"path": "it/byod_policy.md", "name": "Bring Your Own Device (BYOD) Policy", "document_type": "policy", "department": "IT", "category": "security_policy", "allowed_roles": ["admin", "employee"]},
+  {"path": "it/incident_response_procedures.md", "name": "Incident Response Procedures", "document_type": "procedure", "department": "IT", "category": "security_procedure", "allowed_roles": ["admin"]},
+  {"path": "it/business_continuity_plan.md", "name": "Business Continuity and Disaster Recovery Plan", "document_type": "procedure", "department": "IT", "category": "security_procedure", "allowed_roles": ["admin"]},
+
+  {"path": "compliance/vendor_management_policy.md", "name": "Vendor Management Policy", "document_type": "policy", "department": "Compliance", "category": "vendor_policy", "allowed_roles": ["admin", "employee"]},
+  {"path": "compliance/data_retention_policy.md", "name": "Data Retention Policy", "document_type": "policy", "department": "Compliance", "category": "data_policy", "allowed_roles": ["admin", "employee"]},
+  {"path": "compliance/data_classification_policy.md", "name": "Data Classification Policy", "document_type": "policy", "department": "Compliance", "category": "data_policy", "allowed_roles": ["admin", "employee"]},
+  {"path": "compliance/aml_kyc_policy.md", "name": "Anti-Money Laundering (AML) and Know Your Customer (KYC) Policy", "document_type": "policy", "department": "Compliance", "category": "compliance_policy", "allowed_roles": ["admin", "employee"]},
+  {"path": "compliance/whistleblower_policy.md", "name": "Whistleblower Policy", "document_type": "policy", "department": "Compliance", "category": "compliance_policy", "allowed_roles": ["admin", "employee"]},
+
+  {"path": "finance/expense_approval_policy.md", "name": "Finance Expense Approval Policy", "document_type": "policy", "department": "Finance", "category": "finance_policy", "allowed_roles": ["admin", "employee"]},
+  {"path": "finance/procurement_policy.md", "name": "Procurement Policy", "document_type": "policy", "department": "Finance", "category": "finance_policy", "allowed_roles": ["admin", "employee"]},
+  {"path": "finance/month_end_close_procedure.md", "name": "Month-End Close Procedure", "document_type": "procedure", "department": "Finance", "category": "finance_procedure", "allowed_roles": ["admin", "employee"]},
+  {"path": "finance/executive_compensation_policy.md", "name": "Executive Compensation Policy", "document_type": "policy", "department": "Finance", "category": "compensation_policy", "allowed_roles": ["admin"]},
+
+  {"path": "product/acme_digital_banking_platform_overview.md", "name": "AcmeDigital Banking Platform Overview", "document_type": "product_documentation", "department": "Product", "category": "product_documentation", "allowed_roles": ["admin", "employee"]},
+  {"path": "product/api_integration_guide.md", "name": "AcmeDigital API Integration Guide", "document_type": "product_documentation", "department": "Engineering", "category": "product_documentation", "allowed_roles": ["admin", "employee"]}
+]
